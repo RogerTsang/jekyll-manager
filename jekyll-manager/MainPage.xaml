@@ -7,7 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+        <TextBlock x:Name="Directory_Hint" HorizontalAlignment="Left" Margin="72,72,0,0" TextWrapping="Wrap" Text="Jekyll Blog Directory" VerticalAlignment="Top" Height="50" Width="250" FontSize="24"/>
+        <Button x:Name="Browse_Button" Margin="1096,72,0,0" Content="Browse" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Click="Browse_Button_Click" />
+        <TextBox x:Name="Path_Text" HorizontalAlignment="Left" Margin="327,72,0,0" TextWrapping="Wrap" Text="(Empty)" VerticalAlignment="Top" Width="709" FontSize="24" IsReadOnly="True"/>
+        <TextBlock x:Name="Post_Hint" HorizontalAlignment="Left" Margin="837,228,0,0" TextWrapping="Wrap" Text="Posts" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock x:Name="Content_Hint" HorizontalAlignment="Left" Margin="72,228,0,0" TextWrapping="Wrap" Text="Content" VerticalAlignment="Top" FontSize="24"/>
+        <TextBox x:Name="Content_Text" HorizontalAlignment="Left" Margin="72,265,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="588" Width="709"/>
+        <ListView x:Name="Post_View" HorizontalAlignment="Left" Height="593" Margin="837,260,0,0" VerticalAlignment="Top" Width="356" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" SelectionChanged="Post_View_SelectionChanged"/>
 
     </Grid>
 </Page>
