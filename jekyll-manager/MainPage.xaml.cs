@@ -72,7 +72,8 @@ namespace jekyll_manager
             data.content = string.Empty;
             if (e.AddedItems != null && e.AddedItems.Count >= 1)
             {
-                string post_path = Path.Combine(data.location_post, (string)e.AddedItems[0]);
+                PostModel post_selected = e.AddedItems[0] as PostModel;
+                string post_path = Path.Combine(data.location_post, post_selected.filename);
                 try
                 {
                     StorageFile post_file = await StorageFile.GetFileFromPathAsync(post_path);
